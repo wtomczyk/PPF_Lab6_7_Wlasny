@@ -1,0 +1,15 @@
+#logoImg{
+    width:350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer;
+}
+#header{
+    width:100%;
+}
+@media screen and (max-width: 600px) {
+    #logoImg{
+        float:inherit
+    }
+}
