@@ -7,8 +7,11 @@ class A4 extends Component{
     }
     componentDidMount() {
         this.interval = setInterval(() =>{
-            document.getElementById("div4").style.top=this.props.a+'px'
-            document.getElementById("div4").style.left=this.props.b+'px'
+            if(document.getElementById("div4")==undefined){
+                clearInterval(this.interval)
+            }
+                document.getElementById("div4").style.top=this.props.a+'px'
+                document.getElementById("div4").style.left=this.props.b+'px'
         }, 5);
       }
     render(){

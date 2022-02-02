@@ -11,20 +11,23 @@ class A3 extends Component{
     }
     componentDidMount() {
         this.interval = setInterval(() =>{
-            if(this.state.a<46 && this.state.b == 0){
-                this.setState({a:(this.state.a+1)})
-            }
-            else if(this.state.a>=46 && this.state.b <=46){
-                this.setState({b:(this.state.b+1)})
-            }
-            else if(this.state.a>=0 && this.state.b >=46){
-                this.setState({a:(this.state.a-1)})
-            }
-            else{
-                this.setState({b:(this.state.b-1)})
-            }
-            document.getElementById("div3").style.top=this.props.a+'px'
-            document.getElementById("div3").style.left=this.props.b+'px'
+                if(document.getElementById("div3")==undefined){
+                    clearInterval(this.interval)
+                }
+                if(this.state.a<46 && this.state.b == 0){
+                    this.setState({a:(this.state.a+1)})
+                }
+                else if(this.state.a>=46 && this.state.b <=46){
+                    this.setState({b:(this.state.b+1)})
+                }
+                else if(this.state.a>=0 && this.state.b >=46){
+                    this.setState({a:(this.state.a-1)})
+                }
+                else{
+                    this.setState({b:(this.state.b-1)})
+                }
+                document.getElementById("div3").style.top=this.props.a+'px'
+                document.getElementById("div3").style.left=this.props.b+'px'
         }, 5);
       }
     render(){

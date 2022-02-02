@@ -4,29 +4,31 @@ import A3 from "./a3";
 class A2 extends Component{
     constructor(props) {
         super(props);
-        this.state = {a:0,b:0};
-    }
-    stateChange = () =>{
-        this.setState({a:(this.state.a+0.01)})
+        this.state = {a:0,b:0,true:false};
     }
     componentDidMount() {
+        this.setState({true:true})
         this.interval = setInterval(() =>{
-            if(this.state.a<96 && this.state.b == 0){
-                this.setState({a:(this.state.a+1)})
+            if(document.getElementById("div2")==undefined){
+                clearInterval(this.interval)
             }
-            else if(this.state.a>=96 && this.state.b <=96){
-                this.setState({b:(this.state.b+1)})
+            if(this.state.true){
+                if(this.state.a<96 && this.state.b == 0){
+                    this.setState({a:(this.state.a+1)})
+                }
+                else if(this.state.a>=96 && this.state.b <=96){
+                    this.setState({b:(this.state.b+1)})
+                }
+                else if(this.state.a>=0 && this.state.b >=96){
+                    this.setState({a:(this.state.a-1)})
+                }
+                else{
+                    this.setState({b:(this.state.b-1)})
+                }
+                document.getElementById("div2").style.top=this.props.a+'px'
+                document.getElementById("div2").style.left=this.props.b+'px'
             }
-            else if(this.state.a>=0 && this.state.b >=96){
-                this.setState({a:(this.state.a-1)})
-            }
-            else{
-                this.setState({b:(this.state.b-1)})
-            }
-            document.getElementById("div2").style.top=this.props.a+'px'
-            document.getElementById("div2").style.left=this.props.b+'px'
         }, 5);
-
       }
     render(){
 
