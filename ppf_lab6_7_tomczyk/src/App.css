@@ -1,7 +1,13 @@
 .App {
   text-align: center;
 }
-
+@font-face {
+  font-family: aaa;
+  src: url(res/aaa.ttf);
+}
+*{
+  font-family: aaa;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
