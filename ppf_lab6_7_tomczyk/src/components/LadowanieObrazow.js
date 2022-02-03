@@ -37,9 +37,9 @@ class LadowanieObrazow extends Component {
         ))
         return(
             <div>
-                <p><h1>Obrazy ładowane dynamicznie metodą pierwszą :</h1></p>
+                <h1>Obrazy ładowane dynamicznie metodą pierwszą :</h1>
                 {items}
-                <p><h1>Obrazy ładowane dynamicznie metodą drugą :</h1></p>
+                <h1>Obrazy ładowane dynamicznie metodą drugą :</h1>
                 {items2}
             </div>
         )
