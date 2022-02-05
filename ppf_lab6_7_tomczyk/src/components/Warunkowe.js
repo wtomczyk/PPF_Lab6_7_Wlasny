@@ -18,7 +18,7 @@ class Warunkowe extends Component{
     render(){
         return(
             <div>
-               <h1 id="warunekh1">Warunkowe ładowanie komponentów (technicznie zmienianie stron także się zalicza do tego)</h1>
+               <h1 id="warunekh1">Warunkowe ładowanie komponentów</h1>
                 <button id="button" onClick={this.stateChange}>
                     Naciśnij, aby zmienić komponent poniżej
                 </button>
